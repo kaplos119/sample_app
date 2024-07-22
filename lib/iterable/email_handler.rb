@@ -6,6 +6,7 @@ module Iterable
       @user = user
     end
 
+    # This method delivers the mails to users via delayed job
     def deliver
       send_request
     end

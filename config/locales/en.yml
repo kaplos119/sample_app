@@ -31,3 +31,13 @@
 
 en:
   hello: "Hello world"
+  controllers:
+    event:
+      unauthorized_user: 'User not logged in'
+      internal_error: 'Something went wrong'
+  lib:
+    iterable:
+      base:
+        unknown_event: 'Unknown event name passed'
+      event_handler:
+        backend_error: 'Backend Error'

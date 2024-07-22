@@ -1,6 +1,7 @@
 module Iterable
   class EventHandler < Base
 
+    # This method create events for event A, B and invokes mail trigger
     def create_event
       response = send_request
       json_response = JSON.parse(response.body)
@@ -8,7 +9,7 @@ module Iterable
       return json_response['msg'], json_response['code']
     rescue StandardError => error
       Rails.logger.error "Not able to create event ==> #{error}"
-      raise RequestError.new('Backend Error')
+      raise RequestError.new(I18n.t('lib.iterable.event_handler.backend_error'))
     end
 
     private
