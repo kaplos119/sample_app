@@ -1,0 +1,6 @@
+<h1>Welcome to Coffeebeans Sample app</h1>
+<% if user_signed_in? %> 
+  <%= render "events_content" %>
+<% else %>
+  <%= button_to "Sign in", new_user_session_path %> 
+<% end %>

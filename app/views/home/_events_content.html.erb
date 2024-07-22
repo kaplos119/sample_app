@@ -1,0 +1,14 @@
+<div>
+  <div>
+    <div> Welcome <%= current_user.email %> </div>
+    <button class="event" value="event_a">Event A</button>
+    <button class="event" value="event_b">Event B</button>
+  </div>
+  <div>
+    <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+  </div>
+</div>
+
+<% content_for :head do %>
+  <%= javascript_import_module_tag "events" %>
+<% end %>
